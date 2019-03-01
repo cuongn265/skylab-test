@@ -1,0 +1,13 @@
+<div style="white-space: pre-wrap">6. /question5/answer :
+  Create logger class support multiple output such as a console, file ( in log/ folder ), mail
+</div>
+<p>Commands to run:</p>
+<pre>
+CustomLogger.info("Info message from custom logger")
+CustomLogger.warn("Warning message from custom logger")
+CustomLogger.error("Error message from custom logger")
+</pre>
+<p>Notes:</p>
+<p>Please start sidekiq with `sidekiq -C config/sidekiq.yml`</p>
+<p>Please use Mailcatcher on port 1025 to receive log via email</p>
+<p>Please check `log/skylab.log` for checking log to file</p>
