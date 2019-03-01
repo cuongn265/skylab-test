@@ -1,7 +1,7 @@
 class AnswerService
   class << self
-    def question1(ascending: true)
-      array = [9, 1, 8, 2, 7, 3, 6, 4, 5, 10, 13]
+    def question1(input_array, ascending: true)
+      array = input_array.dup
       sorted = false
       comparison_operator = ascending ? :> : :<
 
