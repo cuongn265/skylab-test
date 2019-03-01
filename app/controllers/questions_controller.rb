@@ -18,4 +18,11 @@ class QuestionsController < ApplicationController
 
     @result = AnswerService.question3(string)
   end
+
+  def question4
+    string = 'zyabcdabcac'
+
+    @ascending = AnswerService.question4(string, column: 1, ascending: true)
+    @descending = AnswerService.question4(string, column: 1, ascending: false)
+  end
 end
