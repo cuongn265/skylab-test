@@ -6,4 +6,10 @@ class QuestionsController < ApplicationController
     @descending = AnswerService.question1(array, ascending: false)
   end
 
+  def question2
+    array_1 = [3, 4, 6, 3, 7, 8, 5, 9]
+    array_2 = [5, 4, 1, 2, 3]
+
+    @result = AnswerService.question2(array_1, array_2)
+  end
 end

@@ -19,6 +19,29 @@ class AnswerService
       array
     end
 
+    def question2(array_1, array_2)
+      sorted_array_1 = question1(array_1)
+      sorted_array_2 = question1(array_2)
+
+      common_elements = []
+      i = 0
+      j = 0
+
+      while (i < sorted_array_1.length && j < sorted_array_2.length)
+        if (sorted_array_1[i] == sorted_array_2[j])
+          common_elements << sorted_array_1[i]
+          i += 1
+          j += 1
+        elsif (sorted_array_1[i] > sorted_array_2[j])
+          j += 1
+        else
+          i += 1
+        end
+      end
+
+      common_elements
+    end
+
     def swap(a, b, array)
       temp = array[a]
       array[a] = array[b]
