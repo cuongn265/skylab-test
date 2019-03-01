@@ -12,4 +12,10 @@ class QuestionsController < ApplicationController
 
     @result = AnswerService.question2(array_1, array_2)
   end
+
+  def question3
+    string = 'abfgcdabcdabcdabcdeabcdcbaf'
+
+    @result = AnswerService.question3(string)
+  end
 end

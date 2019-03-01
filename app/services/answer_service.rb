@@ -42,6 +42,20 @@ class AnswerService
       common_elements
     end
 
+    def question3(string)
+      hash = {}
+      array = string.split('')
+
+      array.each do |element|
+        hash[element] ||= 0
+        hash[element] += 1
+      end
+
+      array.each do |element|
+        return element if hash[element] == 1
+      end
+    end
+
     def swap(a, b, array)
       temp = array[a]
       array[a] = array[b]
